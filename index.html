@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+                background-color: rgba(83, 83, 205, 0.7);
+                     height:100%;
+                
+                background-image: url('school.jpeg');
+                background-size: cover;
+                background-repeat: none;
+                
+            }
+            
+            
+            .slideshow{
+                display:none;
+            }
+            .active{
+                background-color: #717171;
+            }
+            
+            h1{
+                text-align: center;
+                font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+                
+            }
+            img#logo{
+                float:right;
+                position:absolute;
+                top:0;
+                right:20px;
+                width:10%;
+                height:20%;
+                
+                border-radius: 50%;
+            }
+            img#logo:hover{
+                transform: rotateY(360deg);
+                transition:3s;
+            }
+            img{
+                position:fixed;
+                width: 100%;
+                height:75%;
+                
+            }
+            p,#also{
+                text-align:center;
+                padding: 1px;
+            }
+            .text{
+                position:absolute;
+                bottom:8px;
+                color:white;
+                left:600px;
+                font-size: 24px;
+                padding: 8px 12px;
+                text-align: center;
+
+            }
+            
+            
+            #menu{
+                display:inline-blolck;
+                cursor:pointer;
+                position:fixed;
+                top:142px;
+                left:10px;  
+            }
+            .line,.line2,.line3{
+                width:23px;
+                height:1px;
+               padding: 1px 3px;
+                background-color: black;
+                margin: 6px 0;
+            }
+            
+#sidePan{
+    width:0;
+    
+    background-color:rgb(25, 25, 57);
+    text-decoration: none;
+    font-size: 30px;
+    z-index: 1;
+    overflow: hidden;
+    height:100%;
+    position:fixed;
+    top:0px;
+    left:0;
+    transition:0.5s;
+    padding: 10px 1px;
+    
+}
+a:hover{
+    color:green;
+    font-style: italic;
+
+    
+}
+#term:hover{
+    color:red;
+}
+a{
+    text-decoration: none;
+    color:aqua;
+    padding: 8px 8px 8px 32px;
+
+}
+        </style>
+   
+    </head>
+    <body>
+
+        <div id="sidePan" >
+            <div><a id="term" href="javascript:void(0)" style="font-size:30px;top:0;left:190px;position:relative;">&times;</a></div>
+            <div><a href="index.html">Home</a></div>
+            <div><a href="About.html">About</a></div>
+            <div><a href="RegistrationPage.html">Register</a></div>
+            <div><a href="NewAlumni.html">Alumni</a></div>
+            <div><a href="staff.html">Staff</a></div>
+            <div><a href="contacts.html">Contacts</a></div>
+
+        </div>
+        <div id="container">
+        <div id="menu" onclick="sidepanchange(this)">
+            <div class="line"></div><span style="float:left;position:relative;left:40px;top:-7px;font-size:20px;">MENU</span>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+        <div id="heading" >
+        <h1>WELCOME! TO CENNTENIAL CHRISTIAN SEMINARY</h1>
+        <img id="logo" src="logo.jpeg" onclick="sidepanchange()" style="cursor:pointer">
+        <h1> Secondary school</h1>
+        <i><b><p>We prepare you to become a new generation leader</p></b></i>
+        <hr style="border-width:2px ;color:  black">
+        </div>
+        
+                                   
+        </div>
+                            </div>
+                            <div style="position:fixed;bottom:0px;color:white;background-color: darkslateblue;margin-top:6%;height:16%;width:100%;left:0;text-align: left;padding-left: 2%;">
+                                <h4 style="padding-top:0%;">Cenntenial christian Seminary<br>P.O.BOX 4939<br>Dar Es Salaam <br>Tanzania</h4>  <span id="mini" style="right:52px;top:50px;position:absolute"><h4>Facebook Twitter Instagram Youtube</h4></span>
+                                
+                            </div>
+                        
+        
+        <script>
+            
+            
+           function sidepanchange(x){
+                  var i;
+                document.body.style.backgroundColor='rgba(0,0,0,.2)';
+                let fine= document.getElementsByTagName("img");
+                   for(i=0;i<fine.length;i++){
+                       fine[i].style.opacity='.2';
+                   }   
+                document.getElementById("sidePan").style.width='250px';
+                document.getElementById("container").style.marginLeft="250px";}
+               
+                    
+                
+                
+                    let y=document.getElementById("term");
+    y.onclick=                function (){document.getElementById("sidePan").style.width='0';
+                                            document.body.style.backgroundColor='rgba(83,83,205,.7)';
+                                            document.getElementById("container").style.marginLeft="0";
+                                            let fine= document.getElementsByTagName("img");
+                   for(i=0;i<fine.length;i++){
+                       fine[i].style.opacity='1';
+                   }   
+                        }                    
+            </script>
+
+    </body>
+</html>
