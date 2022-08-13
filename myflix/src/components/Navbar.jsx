@@ -7,7 +7,7 @@ const Navbar = () => {
 <div>
     <button className='text-light  btn btn-dark'>Sign in</button>
 
-    <button className='bg-danger px-6 py-2 btn  rounded cursor-pointer text-light'> Sign in</button>
+    <button className='bg-danger px-8  mx-4 py-2 btn  rounded cursor-pointer text-light'> Sign in</button>
 </div>
     </div>
   )
